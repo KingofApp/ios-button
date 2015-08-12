@@ -44,7 +44,7 @@
 
     :host([active]) {
       background: var(--ios-button-color, --default-primary-color);
-      color: #fff;
+      color: #fff !important; /* TODO: Try to remove this !important */
     }
 
     :host([big]) {
@@ -56,7 +56,7 @@
     :host([fill]) {
       background: var(--ios-button-color, --default-primary-color);
       border: none;
-      color: #fff;
+      color: #fff !important; /* TODO: Try to remove this !important */
     }
 
     :host([fill]):active {
