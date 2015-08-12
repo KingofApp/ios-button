@@ -1,0 +1,90 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<dom-module id="ios-button">
+
+  <style>
+    :host {
+      appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -webkit-appearance: none;
+      background: none;
+      border-radius: 5px;
+      border: 1px solid var(--ios-button-color, --default-primary-color);
+      box-sizing: border-box;
+      color: var(--ios-button-color, --default-primary-color);
+      cursor: pointer;
+      display: block;
+      font-family: inherit;
+      font-size: 14px;
+      height: 29px;
+      line-height: 27px;
+      margin: 0;
+      overflow: hidden;
+      padding: 0 10px;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    :host([disabled]) {
+      opacity: 0.55;
+      pointer-events: none;
+    }
+
+    :host:active {
+      background: var(--ios-button-active-color, --light-primary-color);
+    }
+
+    :host([round]) {
+      border-radius: 27px;
+    }
+
+    :host([active]) {
+      background: var(--ios-button-color, --default-primary-color);
+      color: #fff !important; /* TODO: Try to remove this !important */
+    }
+
+    :host([big]) {
+      font-size: 17px;
+      height: 44px;
+      line-height: 42px;
+    }
+
+    :host([fill]) {
+      background: var(--ios-button-color, --default-primary-color);
+      border: none;
+      color: #fff !important; /* TODO: Try to remove this !important */
+    }
+
+    :host([fill]):active {
+      opacity: 0.8;
+    }
+
+    i.icon:first-child {
+      margin-right: 10px;
+    }
+
+    i.icon:last-child {
+      margin-left: 10px;
+    }
+
+    i.icon:first-child:last-child {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  </style>
+
+  <template>
+    <content></content>
+  </template>
+
+</dom-module>
+
+<script>
+  Polymer({
+    is: 'ios-button'
+  });
+</script>
