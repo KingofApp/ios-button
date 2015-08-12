@@ -10,9 +10,9 @@
         -webkit-appearance: none;
       background: none;
       border-radius: 5px;
-      border: 1px solid #007aff;
+      border: 1px solid var(--ios-button-color, --default-primary-color);
       box-sizing: border-box;
-      color: #007aff;
+      color: var(--ios-button-color, --default-primary-color);
       cursor: pointer;
       display: block;
       font-family: inherit;
@@ -35,7 +35,7 @@
     }
 
     :host:active {
-      background: rgba(0, 122, 255, 0.15);
+      background: var(--ios-button-active-color, --light-primary-color);
     }
 
     :host([round]) {
@@ -43,7 +43,7 @@
     }
 
     :host([active]) {
-      background: #007aff;
+      background: var(--ios-button-color, --default-primary-color);
       color: #fff;
     }
 
@@ -54,7 +54,7 @@
     }
 
     :host([fill]) {
-      background: #007aff;
+      background: var(--ios-button-color, --default-primary-color);
       border: none;
       color: #fff;
     }
