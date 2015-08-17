@@ -22,7 +22,7 @@
     "polymer": "polymer/polymer#~1.1.0"
   },
   "devDependencies": {
-    "iron-component-page": "PolymerElements/iron-component-page#~1.0.5",
-    "webcomponentsjs": "webcomponents/webcomponentsjs#~0.7.11"
+    "webcomponentsjs": "webcomponents/webcomponentsjs#~0.7.11",
+    "iron-component-page": "PolymerElements/iron-component-page#~1.0.5"
   }
 }
