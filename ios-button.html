@@ -50,7 +50,7 @@ Copyright (c) 2015 Team King of App. All rights reserved.
 
       :host([active]) {
         background: var(--ios-button-color, --default-primary-color);
-        color: #fff !important; /* TODO: Try to remove this !important */
+        color: var(--ios-button-text-color, white);
       }
 
       :host([big]) {
@@ -62,7 +62,7 @@ Copyright (c) 2015 Team King of App. All rights reserved.
       :host([fill]) {
         background: var(--ios-button-color, --default-primary-color);
         border: none;
-        color: #fff !important; /* TODO: Try to remove this !important */
+        color: var(--ios-button-text-color, white);
       }
 
       :host([fill]):active {
