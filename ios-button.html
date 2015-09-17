@@ -5,6 +5,7 @@ This code may only be used under the MIT license.
 -->
 
 <link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../ios-behaviors/ios-button-behavior.html">
 
 <dom-module id="ios-button">
   <template>
@@ -90,7 +91,11 @@ This code may only be used under the MIT license.
 
   <script>
     Polymer({
-      is: 'ios-button'
+      is: 'ios-button',
+
+      behaviors: [
+        Polymer.IosButtonBehavior
+      ]
     });
   </script>
 </dom-module>
