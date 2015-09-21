@@ -19,7 +19,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.1.0"
+    "polymer": "Polymer/polymer#^1.1.0",
+    "ios-styles": "KingofApp/ios-styles#^0.1.0"
   },
   "devDependencies": {
     "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0",
