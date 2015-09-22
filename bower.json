@@ -20,6 +20,7 @@
   "license": "MIT",
   "dependencies": {
     "polymer": "Polymer/polymer#^1.1.0",
+    "ios-behaviors": "KingofApp/ios-behaviors#^0.1.0",
     "ios-styles": "KingofApp/ios-styles#^0.1.0"
   },
   "devDependencies": {
