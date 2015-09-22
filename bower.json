@@ -1,6 +1,6 @@
 {
   "name": "ios-button",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "iOS design button",
   "authors": [
     "Abdón Rodríguez Davila <thepeer@kingofapp.es>"
@@ -20,6 +20,7 @@
   "license": "MIT",
   "dependencies": {
     "polymer": "Polymer/polymer#^1.1.0",
+    "ios-behaviors": "KingofApp/ios-behaviors#^0.1.0",
     "ios-styles": "KingofApp/ios-styles#^0.1.0"
   },
   "devDependencies": {
