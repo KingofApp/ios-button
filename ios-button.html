@@ -39,6 +39,7 @@ Custom property | Description | Default
 `--ios-button-text-color` | Text color | `white`
 `--ios-button` | Mixin applied to the button | `{}`
 `--ios-button-disabled` | Mixin applied to the disabled button. Note that you can also use the `ios-button[disabled]` selector | `{}`
+`--ios-button-keyboard-focus` | Mixin applied to a button after it's been focused using the keyboard | `{}`
 
 @demo demo/index.html
 -->
@@ -74,12 +75,23 @@ Custom property | Description | Default
         @apply(--ios-button);
       }
 
+      :host .keyboard-focus {
+        font-weight: bold;
+
+        @apply(--ios-button-keyboard-focus);
+      }
+
       :host([disabled]) {
         opacity: 0.55;
         pointer-events: none;
 
         @apply(--ios-button-disabled);
       }
+
+      .content > ::content * {
+        text-transform: inherit;
+      }
+
 
       :host:active {
         background: var(--ios-button-active-color, --light-primary-color);
@@ -124,8 +136,9 @@ Custom property | Description | Default
       }
     </style>
 
-    <content></content>
-
+    <div class$="[[_computeContentClass(receivedFocusFromKeyboard)]]">
+      <content></content>
+    </div>
   </template>
 
   <script>
@@ -134,7 +147,15 @@ Custom property | Description | Default
 
       behaviors: [
         Polymer.IosButtonBehavior
-      ]
+      ],
+
+      _computeContentClass: function(receivedFocusFromKeyboard) {
+        var className = 'content ';
+        if (receivedFocusFromKeyboard) {
+          className += ' keyboard-focus';
+        }
+        return className;
+      }
     });
   </script>
 </dom-module>
